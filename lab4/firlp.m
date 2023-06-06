@@ -5,4 +5,3 @@ alpha = (filterLength_N-1)/2;
 n = 0:filterLength_N-1;
 n = n-alpha;
 impulseResponse_h = sin(n.*cutoffFrequency_wc)./(n.*pi);
-end
