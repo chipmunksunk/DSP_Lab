@@ -1,6 +1,5 @@
 function [impulseResponse_h] = firlp(filterLength_N,cutoffFrequency_wc)
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+%FIR Filter Type I Generator: Lowpass
 alpha = (filterLength_N-1)/2;
 n = 0:filterLength_N-1;
 n = n-alpha;
