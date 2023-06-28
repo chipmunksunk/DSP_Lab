@@ -3,16 +3,18 @@ clc;
 clear;
 close all;
 
-%% Sigma_hat
+%% Variance of the residuals - Sigma_hat
 load('.\files_lab8\arunknown.mat')
 N = length(X);
 m = 1:10;
 
+% AR model parameters
 a = {};
 for i = m 
     a = {a{:}, aryule(X, i)};
 end
 
+% Variance of the residuals
 sigma_hat = [];
 for i = m 
     sum_n = 0;
@@ -24,7 +26,7 @@ for i = m
         for k = 1:i
             sum_k = sum_k+a_k(k)*X(n-k+1);
         end
-        
+
         sum_n = (X(n)+ sum_k)^2;
     end
 
@@ -45,6 +47,15 @@ figure;
 plot(AIC);
 hold on;
 plot(MDL);
+hold off;
+legend(["AIC", "MDL"]);
+xlabel("Model order m");
+ylabel("Criterion Magnitude")
+
+figure;
+stem(AIC);
+hold on;
+stem(MDL);
 hold off;
 legend(["AIC", "MDL"]);
 xlabel("Model order m");

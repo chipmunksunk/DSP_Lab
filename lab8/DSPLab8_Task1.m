@@ -16,15 +16,11 @@ x = filter(b_h, a_h, z);
 a_hat = aryule(x, p);
 [H_hat, w_hat] = freqz(1, a_hat, N);
 
-figure;
-plot(w_hat, abs(H_hat));
-
 %% Spectrum Estimation - pyulear
-%[H_hat_pyulear, w_pyulear] = pyulear(x, p, w_hat);
 H_hat_pyulear = pyulear(x, p);
 w_pyulear = linspace(0, pi, length(H_hat_pyulear));
 
-
+%[H_hat_pyulear, w_pyulear] = pyulear(x, p, w_hat);
 
 %% True Spectrum
 [H, w] = freqz(b_h, a_h, N);
