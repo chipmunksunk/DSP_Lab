@@ -33,7 +33,6 @@ for i = m
     sigma_hat = [sigma_hat, 1/(N-i) * sum_n];
 end
 
-
 %% Akaike's Information Criterion (AIC)
 AIC = log(sigma_hat)+ m.*(2/N);
 
@@ -51,6 +50,7 @@ hold off;
 legend(["AIC", "MDL"]);
 xlabel("Model order m");
 ylabel("Criterion Magnitude")
+grid on
 
 figure;
 stem(AIC);
@@ -60,3 +60,4 @@ hold off;
 legend(["AIC", "MDL"]);
 xlabel("Model order m");
 ylabel("Criterion Magnitude")
+grid on
