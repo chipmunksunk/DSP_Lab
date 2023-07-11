@@ -31,4 +31,4 @@ imagesc(Spec);
 
 figure;
 ovl = length(window)-timestep;
-spectrogram(sinFM, window, ovl, 512, f_s);
+spectrogram(sinFM, window, ovl, 512, f_s, 'yaxis');
