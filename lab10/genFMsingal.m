@@ -1,6 +1,7 @@
-function [outputArg1,outputArg2] = genFMsingal(alpha,beta, gamma, fc, fs, tStart, tStop)
-%UNTITLED3 Summary of this function goes here
-%   Detailed explanation goes here
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+function [x] = genFMsingal(alpha, beta, gamma, f_c, f_s, tStart, tStop)
+%Generate a sinusoidal FM signal
+t = tStart:1/f_s:tStop;
+Psi = 2*pi*f_c*t+ alpha/beta * sin(2*pi*beta*t+gamma); 
+x = 1*cos(Psi);
+x = x';
 end
