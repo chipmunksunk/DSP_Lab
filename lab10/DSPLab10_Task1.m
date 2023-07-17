@@ -12,7 +12,7 @@ gamma = pi/3;
 T = 3.04;
 t_Start = 0;
 
-sinFM = genFMsingal(alpha, beta, gamma, f_c, f_s, t_Start, t_Start+T);
+sinFM = genFMsignal(alpha, beta, gamma, f_c, f_s, t_Start, t_Start+T);
 
 figure;
 plot(t_Start:1/f_s:t_Start+T, sinFM);

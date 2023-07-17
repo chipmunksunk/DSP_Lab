@@ -1,8 +1,0 @@
-function [w_i, x] = genFMsingal(alpha, beta, gamma, fc, fs, tStart, tStop)
-%Generate a sinusoidal FM signal
-t = linspace(tStart, tStop, (tStop-tStart)*1/f_s);
-
-w_i = 2*pi+2*pi*alpha*cos(2*pi*beta*t+gamma);
-W_i = 
-x = ;
-end
